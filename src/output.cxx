@@ -39,6 +39,8 @@ void write_stream(std::ostream& os, int width, int num, double impact_param,
   // Output ncoll if calculated
   if (ncoll > 0) os << setw(6) << ncoll;
 
+  os << setw(18) << scientific << event.multiplicity()
+     << fixed;  
   os << setw(18) << scientific << event.energy()/event.multiplicity()
      << fixed;
 
